@@ -32,12 +32,8 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            Intent intent = new Intent();
-            startActivityForResult(intent, 0);
-            return true;
-        }
-        else if (id == R.id.action_developer) {
+
+        if (id == R.id.action_developer) {
             Intent intent = new Intent(this, SettingDeveloper.class);
             startActivity(intent);
             return true;
