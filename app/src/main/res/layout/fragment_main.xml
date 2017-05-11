@@ -10,14 +10,44 @@
 
     <Switch
         android:id="@+id/switch_light1"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text = "전등1" />
+        android:text = "전등1"
+        android:textSize="20dp"/>
 
     <Switch
         android:id="@+id/switch_light2"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="전등2"/>
+        android:text="전등2"
+        android:textSize="20dp"/>
+
+    <Switch
+        android:id="@+id/switch_light3"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="전등3"
+        android:textSize="20dp"/>
+
+    <Switch
+        android:id="@+id/switch_tilt"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="흔들림센서"
+        android:textSize="20dp"/>
+
+    <Switch
+        android:id="@+id/switch_illumination"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="조도센서"
+        android:textSize="20dp"/>
+
+    <Switch
+        android:id="@+id/switch_motor"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="모터센서"
+        android:textSize="20dp"/>
 
 </LinearLayout>
