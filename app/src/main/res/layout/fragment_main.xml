@@ -10,13 +10,13 @@
 
     <Switch
         android:id="@+id/switch_light1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text = "전등1" />
 
     <Switch
         android:id="@+id/switch_light2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="전등2"/>
 

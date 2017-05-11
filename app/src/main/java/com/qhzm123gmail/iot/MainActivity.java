@@ -38,9 +38,8 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         else if (id == R.id.action_developer) {
-            Intent intent = new Intent(
-                    getApplicationContext(), SettingDeveloper.class);
-            startActivityForResult(intent,1);
+            Intent intent = new Intent(this, SettingDeveloper.class);
+            startActivity(intent);
             return true;
         }
 
