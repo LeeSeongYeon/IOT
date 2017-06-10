@@ -8,6 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="이성연\n연세대학교 원주캠퍼스 컴퓨터정보통신공학부\n\n\n\n마영진\n연세대학교 원주캠퍼스 컴퓨터정보통신공학부"/>
+        android:text="@string/developer_name"/>
 
 </FrameLayout>
