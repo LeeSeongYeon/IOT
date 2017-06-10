@@ -4,4 +4,6 @@
     <string name="action_developer">개발자</string>
     <string name="developer_name">이성연\n연세대학교 원주캠퍼스 컴퓨터정보통신공학부\n\n\n\n마영진\n연세대학교 원주캠퍼스 컴퓨터정보통신공학부</string>
     <string name="bluetooth_null">블루투스가 없는 기종입니다</string>
+    <string name="pairing_device_text">페어링 가능한 기기</string>
+    <string name="scan_button">기기 스캔</string>
 </resources>

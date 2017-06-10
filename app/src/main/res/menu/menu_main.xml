@@ -4,8 +4,14 @@
     tools:context="com.qhzm123gmail.iot.MainActivity">
 
     <item
+        android:id="@+id/menu_bluetooth"
+        android:orderInCategory="10"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/action_developer"
-        android:orderInCategory="110"
+        android:orderInCategory="111"
         android:title="@string/action_developer"
         app:showAsAction="never"/>
+
+
 </menu>

@@ -40,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == BLUETOOTH_OFF) {
             if (resultCode == Activity.RESULT_OK) {
-
+                Intent intent = new Intent(this, DeviceListActivity.class);
+                startActivity(intent);
             }
             else {
                 Toast.makeText(this, "블루투스를 사용할 수 없습니다.",
@@ -70,6 +71,10 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, SettingDeveloper.class);
             startActivity(intent);
             return true;
+        }
+        else if (id == R.id.menu_bluetooth) {
+            bluetooth = null;
+            bluetooth = new Bluetooth(this, handler);
         }
 
         return super.onOptionsItemSelected(item);
