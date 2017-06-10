@@ -1,13 +1,27 @@
 package com.qhzm123gmail.iot;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    private Bluetooth bluetooth = null;
+    private static final int BLUETOOTH_OFF = 100;
+
+    private final Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +29,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        if (bluetooth == null) {
+            bluetooth = new Bluetooth(this, handler);
+        }
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == BLUETOOTH_OFF) {
+            if (resultCode == Activity.RESULT_OK) {
+
+            }
+            else {
+                Toast.makeText(this, "블루투스를 사용할 수 없습니다.",
+                        Toast.LENGTH_SHORT).show();
+                ActivityCompat.finishAffinity(this);
+            }
+        }
     }
 
     @Override
@@ -41,4 +74,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
