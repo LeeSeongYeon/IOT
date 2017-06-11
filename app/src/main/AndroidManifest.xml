@@ -23,7 +23,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SettingDeveloper"/>
-        <activity android:name=".DeviceListActivity"/>
+        <activity android:name=".DeviceListActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog"/>
     </application>
 
 </manifest>

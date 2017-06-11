@@ -10,13 +10,36 @@
         android:layout_height="wrap_content"
         android:text="@string/scan_button" />
 
+    <TextView
+        android:id="@+id/title_paired_device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/paired_device_text"/>
+
+    <ListView
+        android:id="@+id/paired_device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:stackFromBottom="true">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/title_pairing_device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pairing_device_text"/>
     <ListView
         android:id="@+id/pairing_device"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/pairing_device_text">
+        android:layout_weight="2"
+       android:stackFromBottom="true">
 
     </ListView>
+
+
 
 
 </LinearLayout>

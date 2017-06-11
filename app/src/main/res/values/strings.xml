@@ -3,7 +3,12 @@
     <string name="action_settings">Settings</string>
     <string name="action_developer">개발자</string>
     <string name="developer_name">이성연\n연세대학교 원주캠퍼스 컴퓨터정보통신공학부\n\n\n\n마영진\n연세대학교 원주캠퍼스 컴퓨터정보통신공학부</string>
-    <string name="bluetooth_null">블루투스가 없는 기종입니다</string>
-    <string name="pairing_device_text">페어링 가능한 기기</string>
-    <string name="scan_button">기기 스캔</string>
+    <string name="bluetooth_null">블루투스가 없는 디바이스입니다</string>
+    <string name="pairing_device_text">페어링 가능한 디비이스</string>
+    <string name="scan_button">디바이스 스캔</string>
+    <string name="scanning">디바이스를 찾습니다....</string>
+    <string name="paired_device_text">페어링된 디바이스</string>
+    <string name="no_paired_device">페어링된 디바이스가 없습니다.</string>
+    <string name="select_device">연결할 디바이스를 선택하십시오</string>
+    <string name="no_found_device">연결할 디바이스가 없습니다.</string>
 </resources>

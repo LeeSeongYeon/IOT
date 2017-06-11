@@ -15,6 +15,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     private Bluetooth bluetooth = null;
     private static final int BLUETOOTH_OFF = 100;
+    private static final int REQUEST_DEVICE_SCAN = 101;
 
     private final Handler handler = new Handler() {
         @Override
@@ -40,13 +41,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == BLUETOOTH_OFF) {
             if (resultCode == Activity.RESULT_OK) {
-                Intent intent = new Intent(this, DeviceListActivity.class);
-                startActivity(intent);
+                bluetooth.ScanDevice();
             }
             else {
                 Toast.makeText(this, "블루투스를 사용할 수 없습니다.",
                         Toast.LENGTH_SHORT).show();
                 ActivityCompat.finishAffinity(this);
+            }
+        }
+        else if (requestCode == REQUEST_DEVICE_SCAN) {
+            if (resultCode == Activity.RESULT_OK) {
+
             }
         }
     }
@@ -75,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
         else if (id == R.id.menu_bluetooth) {
             bluetooth = null;
             bluetooth = new Bluetooth(this, handler);
+            bluetooth.ScanDevice();
         }
 
         return super.onOptionsItemSelected(item);

@@ -14,6 +14,7 @@ import android.widget.Toast;
 public class Bluetooth {
     private static final String TAG = "BlutoothClass";
     private static final int BLUETOOTH_OFF = 100;
+    private static final int REQUEST_DEVICE_SCAN = 101;
 
     private BluetoothAdapter bluetoothAdapter;
 
@@ -37,6 +38,11 @@ public class Bluetooth {
             Intent intend = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             mainActivty.startActivityForResult(intend, BLUETOOTH_OFF);
         }
+    }
+
+    public void ScanDevice() {
+        Intent scanIntent = new Intent(mainActivty, DeviceListActivity.class);
+        mainActivty.startActivityForResult(scanIntent, REQUEST_DEVICE_SCAN);
     }
 
 
