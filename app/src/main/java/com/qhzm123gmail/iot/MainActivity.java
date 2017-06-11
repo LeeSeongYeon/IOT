@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else if (requestCode == REQUEST_DEVICE_SCAN) {
             if (resultCode == Activity.RESULT_OK) {
-
+                bluetooth.getDeviceInfo(data);
             }
         }
     }
