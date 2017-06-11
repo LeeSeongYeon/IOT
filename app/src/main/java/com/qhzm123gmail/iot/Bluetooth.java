@@ -45,6 +45,10 @@ public class Bluetooth {
         mainActivty.startActivityForResult(scanIntent, REQUEST_DEVICE_SCAN);
     }
 
+    public void getDeviceInfo(Intent data) {
+
+    }
+
 
 
 }
