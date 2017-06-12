@@ -10,12 +10,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
     private Bluetooth bluetooth = null;
     private static final int BLUETOOTH_OFF = 100;
     private static final int REQUEST_DEVICE_SCAN = 101;
+
+    Switch light1;
+
 
     private final Handler handler = new Handler() {
         @Override
@@ -34,6 +39,21 @@ public class MainActivity extends AppCompatActivity {
         if (bluetooth == null) {
             bluetooth = new Bluetooth(this, handler);
         }
+
+        light1 = (Switch)findViewById(R.id.switch_light1);
+
+        light1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked == true) {
+                    Toast.makeText(MainActivity.this, "전등1이 켜졌습니다.", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(MainActivity.this, "전등1이 꺼졌습니다.", Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
 
     }
 
@@ -85,6 +105,4 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
 }
